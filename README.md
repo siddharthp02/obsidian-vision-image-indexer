@@ -1,0 +1,1 @@
+# obsidian-vision-image-indexer
