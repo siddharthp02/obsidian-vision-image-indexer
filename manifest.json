@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-image-meta-search",
+  "name": "Vision Image Indexer",
+  "version": "1.0.3",
+  "minAppVersion": "1.4.0",
+  "description": "Extracts image summaries and keywords via vision models and indexes them in a collapsed details block.",
+  "author": "SidP",
+  "authorUrl": "",
+  "isDesktopOnly": false
+} 
