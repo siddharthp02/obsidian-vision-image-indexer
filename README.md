@@ -24,12 +24,28 @@ This plugin does exactly that. Every time you paste an image, it automatically g
 
 ---
 
-## Installation
+## How to Install & Run
 1. **Clone or download** this repository.
-2. Run `npm install` to install dependencies.
-3. Run `npm run build` to generate the `dist/` folder.
-4. Copy `dist/` and `manifest.json` into your vault's `.obsidian/plugins/obsidian-image-meta-search/` directory.
-5. Enable the plugin in Obsidian's settings.
+2. Open a terminal in the plugin folder and run:
+   ```sh
+   npm install
+   npm run build
+   ```
+3. After building, you will have a `dist/` folder and a `manifest.json` file.
+4. **Copy both `dist/` and `manifest.json`** into your Obsidian vault at:
+   ```
+   <your-vault>/.obsidian/plugins/obsidian-image-meta-search/
+   ```
+   - The folder structure should look like:
+     ```
+     <your-vault>
+     └── .obsidian
+         └── plugins
+             └── obsidian-image-meta-search
+                 ├── dist
+                 └── manifest.json
+     ```
+5. Enable the plugin in Obsidian's settings under Community Plugins.
 
 ---
 
@@ -70,22 +86,9 @@ Describe CI/CD pipelines or deployment strategies.
 
 ---
 
-## Development
-- During development, keep `dist/` in `.gitignore`.
-- For releases, commit `dist/` and `manifest.json` so users can install without building.
-- See the plugin code for details on prompt structure and parsing.
-
-### Release Workflow
-1. Run `npm run build`.
-2. Commit `dist/` and `manifest.json` for the release.
-3. Tag the release if desired.
-4. After release, you may re-add `dist/` to `.gitignore` for ongoing development.
-
----
-
 ## Troubleshooting
 - **Image not analyzed?** Make sure your API key is valid and the model is accessible.
-- **No metadata block?** Check the developer console for errors or model output.
+- **No metadata block?** Check the developer console for errors or model output. (Open the console with **Ctrl+Shift+I** on Windows/Linux, or **Cmd+Opt+I** on Mac.)
 - **Formatting issues?** The plugin enforces a strict prompt, but model output may vary. See logs for the raw output and parsed structure.
 
 ---
