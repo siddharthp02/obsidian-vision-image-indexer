@@ -1,26 +1,32 @@
-<<<<<<< HEAD
-# obsidian-vision-image-indexer
-=======
 # Vision Image Indexer
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Obsidian Plugin](https://img.shields.io/badge/Obsidian-Plugin-purple)](https://obsidian.md)
 
 Extracts image summaries and keywords via vision models (OpenAI GPT-4 Vision, Google Gemini, or Ollama) and indexes them in a collapsed, Obsidian-friendly metadata block.
 
+---
+
 ## Features
-- Paste an image into your note and get an instant, detailed analysis and keyword extraction.
-- Uses GPT-4 Vision, Gemini, or local Ollama models (configurable in settings).
-- Metadata is inserted as a collapsed `<details><pre>...</pre></details>` block directly below the image.
-- Output is highly structured for easy reading and searching.
-- No manual prompt required—uses a robust, enforced prompt for consistent results.
+- **Instant image analysis:** Paste an image and get a detailed, structured summary and keywords.
+- **Multiple vision providers:** Supports GPT-4 Vision, Gemini, and local Ollama models (configurable in settings).
+- **Obsidian-native output:** Metadata is inserted as a collapsed `<details><pre>...</pre></details>` block directly below the image.
+- **Consistent formatting:** Output is highly structured for easy reading and searching.
+- **No manual prompt required:** Uses a robust, enforced prompt for consistent results.
+
+---
 
 ## Installation
-1. Clone or download this repository.
+1. **Clone or download** this repository.
 2. Run `npm install` to install dependencies.
 3. Run `npm run build` to generate the `dist/` folder.
 4. Copy `dist/` and `manifest.json` into your vault's `.obsidian/plugins/obsidian-image-meta-search/` directory.
 5. Enable the plugin in Obsidian's settings.
 
+---
+
 ## Usage
-- Paste an image into any note.
+- **Paste an image** into any note.
 - The plugin will automatically analyze the image and insert a collapsed metadata block below it.
 - The block includes:
   - Title (if inferrable)
@@ -28,23 +34,16 @@ Extracts image summaries and keywords via vision models (OpenAI GPT-4 Vision, Go
   - Codebase, Build & Deployment, AMI Management, Database, Configuration, Service UI & Assets, Special Notes (as relevant)
   - Keywords (comma-separated)
 
+---
+
 ## Settings
-- Choose your vision provider (GPT-4V, Gemini, or Ollama).
-- Set API keys or local model details as needed.
+- **Vision Provider:** Choose between GPT-4V, Gemini, or Ollama.
+- **API Key / Model:** Set API keys or local model details as needed.
 
-## Development
-- During development, keep `dist/` in `.gitignore`.
-- For releases, commit `dist/` and `manifest.json` so users can install without building.
-- See the plugin code for details on prompt structure and parsing.
-
-## Release Workflow
-1. Run `npm run build`.
-2. Commit `dist/` and `manifest.json` for the release.
-3. Tag the release if desired.
-4. After release, you may re-add `dist/` to `.gitignore` for ongoing development.
+---
 
 ## Example Output
-```
+```markdown
 ![[example-image.png]]
 <details>
 <summary>Image metadata</summary>
@@ -61,6 +60,27 @@ Describe CI/CD pipelines or deployment strategies.
 </details>
 ```
 
+---
+
+## Development
+- During development, keep `dist/` in `.gitignore`.
+- For releases, commit `dist/` and `manifest.json` so users can install without building.
+- See the plugin code for details on prompt structure and parsing.
+
+### Release Workflow
+1. Run `npm run build`.
+2. Commit `dist/` and `manifest.json` for the release.
+3. Tag the release if desired.
+4. After release, you may re-add `dist/` to `.gitignore` for ongoing development.
+
+---
+
+## Troubleshooting
+- **Image not analyzed?** Make sure your API key is valid and the model is accessible.
+- **No metadata block?** Check the developer console for errors or model output.
+- **Formatting issues?** The plugin enforces a strict prompt, but model output may vary. See logs for the raw output and parsed structure.
+
+---
+
 ## License
 MIT 
->>>>>>> 32b57c5 (Initial functionality implemented)
