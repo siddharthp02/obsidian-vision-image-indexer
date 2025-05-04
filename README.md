@@ -3,7 +3,15 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Obsidian Plugin](https://img.shields.io/badge/Obsidian-Plugin-purple)](https://obsidian.md)
 
-Extracts image summaries and keywords via vision models (OpenAI GPT-4 Vision, Google Gemini, or Ollama) and indexes them in a collapsed, Obsidian-friendly metadata block.
+---
+
+## Why this plugin? (Motivation)
+
+Ever pasted a screenshot into Obsidian—maybe from a YouTube video, slide deck, flowchart, or diagram—while taking notes? And later, when trying to find it, you realize the content was inside an image, making it invisible to search?
+
+What if every image came with searchable, indexable metadata—so you could find it by content, not just filename? And if you're using Obsidian with an LLM, imagine feeding it this metadata for smarter, more context-aware queries.
+
+This plugin does exactly that. Every time you paste an image, it automatically generates a detailed summary and keyword list, storing them in a collapsible block. The metadata stays out of the way, but always searchable—turning your image collection into a fully discoverable knowledge base.
 
 ---
 
